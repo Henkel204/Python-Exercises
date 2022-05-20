@@ -1,0 +1,17 @@
+import string
+alph = list(string.ascii_lowercase)
+
+def caesar_cipher(string, offset):
+    lst1 = []
+    lst2 = []
+    for c in string:
+        lst1.append(c)
+
+
+    for i in lst1:
+        idx = alph.index(i)
+        i = alph[idx - offset]
+        lst2.append(i)
+    
+    final_str = "".join(lst2)
+    return final_str
